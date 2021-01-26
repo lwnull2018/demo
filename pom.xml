@@ -18,7 +18,7 @@
 
 
     <modules>
-    
+             <module>base_project</module>
     </modules>
 
     <properties>
