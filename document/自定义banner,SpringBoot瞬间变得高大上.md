@@ -6,7 +6,7 @@ SpringBoot默认的banner展示效果：
 
 自定义banner展示效果1：
 
-![image.png](https://i.loli.net/2021/03/15/1tjc6FkO9pDREZn.png)
+![image.png](https://i.loli.net/2021/03/15/mQya3dZ6XAjosLe.png)
 
 自定义banner展示效果2：
 
