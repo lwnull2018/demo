@@ -42,6 +42,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserService userService;
 
+    @Autowired
+    MyWebAuthenticationDetailsSource myWebAuthenticationDetailsSource;
+
     @Bean
     PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
@@ -117,6 +120,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                //用自定义的 MyWebAuthenticationDetailsSource 代替系统默认的 WebAuthenticationDetailsSource
+                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
                 .loginProcessingUrl("/doLogin")
                 .successHandler((req, resp, authentication)->{//登录成功的处理事件
                     Object principal = authentication.getPrincipal();

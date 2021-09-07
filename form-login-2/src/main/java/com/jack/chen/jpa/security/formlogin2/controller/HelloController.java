@@ -1,5 +1,7 @@
 package com.jack.chen.jpa.security.formlogin2.controller;
 
+import com.jack.chen.jpa.security.formlogin2.service.HelloService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+    @Autowired
+    private HelloService helloService;
+
     @GetMapping("/hello")
     public String hello() {
+        helloService.hello();
         return "hello, Spring Security";
     }
 

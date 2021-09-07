@@ -1,14 +1,11 @@
 package com.jack.chen.jpa.security.formlogin2.provider;
 
+import com.jack.chen.jpa.security.formlogin2.config.MyWebAuthenticationDetails;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Description 验证码的验证逻辑
@@ -21,10 +18,7 @@ public class MyAuthenticationProvider extends DaoAuthenticationProvider {
 
     @Override
     protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
-        HttpServletRequest req = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        String code = req.getParameter("code");
-        String verify_code = (String) req.getSession().getAttribute("verify_code");
-        if (code == null || verify_code == null || !code.equals(verify_code)) {
+        if (!((MyWebAuthenticationDetails) authentication.getDetails()).isPassed()) {
             throw new AuthenticationServiceException("验证码错误");
         }
         super.additionalAuthenticationChecks(userDetails, authentication);
