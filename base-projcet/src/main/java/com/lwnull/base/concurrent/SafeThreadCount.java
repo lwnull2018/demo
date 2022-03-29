@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 线程安全计数类，输出结果不会有重复的
- * Created by lwnull2018@gmail.com ON 2018/10/31.
+ * Created by abc@123.com ON 2018/10/31.
  */
 public class SafeThreadCount implements Runnable {
     private final AtomicLong count = new AtomicLong(0);

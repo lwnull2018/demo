@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  *
  * ThreadPoolExecutor 提供了一些方法，我们可以使用这些方法来查询 executor 的当前状态，线程池大小，活动线程数量以及任务数量
  *
- * Created by lwnull2018@gmail.com ON 2018/10/8.
+ * Created by abc@123.com ON 2018/10/8.
  */
 public class MyMonitorThread implements Runnable {
     private ThreadPoolExecutor executor;

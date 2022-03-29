@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 /**
  * 非线程安全，输出结果可能会有重复的
- * Created by lwnull2018@gmail.com ON 2018/10/31.
+ * Created by abc@123.com ON 2018/10/31.
  */
 public class UnsafeThreadCount implements Runnable {
     private long count = 0;

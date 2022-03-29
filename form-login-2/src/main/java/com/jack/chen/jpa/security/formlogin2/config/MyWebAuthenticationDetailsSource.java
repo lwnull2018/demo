@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @Description 请描述类的业务用途
  * @ClassName MyWebAuthenticationDetailsSource
- * @Author lwnull2018@gmail.com
+ * @Author abc@123.com
  * @Date 2021/9/7 4:50 PM
  * @Version 1.0
  **/

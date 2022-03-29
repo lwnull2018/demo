@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * @Description 请描述类的业务用途
  * @ClassName DBUtil
- * @Author lwnull2018@gmail.com
+ * @Author abc@123.com
  * @Date 2021/8/6 1:43 PM
  * @Version 1.0
  **/

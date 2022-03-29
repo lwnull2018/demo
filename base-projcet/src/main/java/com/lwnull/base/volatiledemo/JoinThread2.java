@@ -2,7 +2,7 @@ package com.lwnull.base.volatiledemo;
 
 /**
  *
- * Created by lwnull2018@gmail.com ON 2018/11/25.
+ * Created by abc@123.com ON 2018/11/25.
  */
 public class JoinThread2 extends Thread {
     public static int n = 0;

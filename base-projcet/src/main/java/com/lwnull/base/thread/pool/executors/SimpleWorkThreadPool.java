@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
  * 2)CachedThreadPool 和 ScheduledThreadPool:
  * 允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。
  *
- * Created by lwnull2018@gmail.com ON 2018/10/8.
+ * Created by abc@123.com ON 2018/10/8.
  */
 public class SimpleWorkThreadPool {
 

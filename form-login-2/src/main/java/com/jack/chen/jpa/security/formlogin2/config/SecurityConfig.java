@@ -4,35 +4,30 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.code.kaptcha.Producer;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;
-import com.jack.chen.jpa.security.formlogin2.provider.MyAuthenticationProvider;
 import com.jack.chen.jpa.security.formlogin2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.session.SessionRegistry;
+import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.Properties;
 
 /**
  * @Description 请描述类的业务用途
  * @ClassName SecurityConfig
- * @Author lwnull2018@gmail.com
+ * @Author abc@123.com
  * @Date 2021/9/3 1:38 PM
  * @Version 1.0
  **/
@@ -85,21 +80,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
+    public SessionRegistry getSessionRegistry(){
+        SessionRegistry sessionRegistry = new SessionRegistryImpl();
+        return sessionRegistry;
+    }
+
+    /*@Bean
     MyAuthenticationProvider myAuthenticationProvider() {
         MyAuthenticationProvider myAuthenticationProvider = new MyAuthenticationProvider();
         myAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         myAuthenticationProvider.setUserDetailsService(userService);
         return myAuthenticationProvider;
-    }
+    }*/
 
-    @Override
+    /*@Override
     @Bean
     protected AuthenticationManager authenticationManager() throws Exception {
         //将自定义的 MyAuthenticationProvider 放入 ProviderManager 中统一管理
         ProviderManager manager = new ProviderManager(Arrays.asList(myAuthenticationProvider()));
         return manager;
     }
-
+*/
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService);
@@ -121,7 +122,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 //用自定义的 MyWebAuthenticationDetailsSource 代替系统默认的 WebAuthenticationDetailsSource
-                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
+//                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
                 .loginProcessingUrl("/doLogin")
                 .successHandler((req, resp, authentication)->{//登录成功的处理事件
                     Object principal = authentication.getPrincipal();
@@ -154,7 +155,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 })
                 .permitAll()
                 .and()
-                .csrf().disable();
+                .csrf().disable()
+                .sessionManagement().maximumSessions(1);
     }
 
 }

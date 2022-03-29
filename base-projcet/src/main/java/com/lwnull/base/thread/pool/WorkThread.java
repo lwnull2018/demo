@@ -2,7 +2,7 @@ package com.lwnull.base.thread.pool;
 
 /**
  * 一个实现Runnable接口的普通线程类
- * Created by lwnull2018@gmail.com ON 2018/10/8.
+ * Created by abc@123.com ON 2018/10/8.
  */
 public class WorkThread implements Runnable {
     private String command;

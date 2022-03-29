@@ -2,7 +2,7 @@ package com.jack.chen.telegram.bot.model.enumeration;
 
 /**
  * 活动状态枚举类型
- * Created by lwnull2018@gmail.com ON 2020/10/20.
+ * Created by abc@123.com ON 2020/10/20.
  */
 public enum StatusEnum {
 

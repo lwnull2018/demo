@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 创建我们一个 RejectedExecutionHandler 实现用于处理不能适应工作队列的工作
- * Created by lwnull2018@gmail.com ON 2018/10/8.
+ * Created by abc@123.com ON 2018/10/8.
  */
 public class RejectedExecutionHandlerImpl implements RejectedExecutionHandler {
 

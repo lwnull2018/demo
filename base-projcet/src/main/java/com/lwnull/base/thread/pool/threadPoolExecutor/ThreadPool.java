@@ -14,7 +14,7 @@ import java.util.concurrent.*;
  * 4、当阻塞队列已满放不下新的任务，再添加新任务则会继续创建新线程，但线程数量不超过maximumPoolSize；
  * 5、当线程数量达到maximumPoolSize时，再添加新任务则会抛出异常。
  *
- * Created by lwnull2018@gmail.com ON 2018/10/8.
+ * Created by abc@123.com ON 2018/10/8.
  */
 public class ThreadPool {
 

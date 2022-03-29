@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 /**
  * @Description 验证码的验证逻辑
  * @ClassName MyAuthenticationProvider
- * @Author lwnull2018@gmail.com
+ * @Author abc@123.com
  * @Date 2021/9/7 1:23 PM
  * @Version 1.0
  **/

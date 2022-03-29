@@ -11,7 +11,7 @@ package com.lwnull.base.volatiledemo;
  *
  *  保证原子操作，请查看 JoinThread2 类
  *
- * Created by lwnull2018@gmail.com ON 2018/11/25.
+ * Created by abc@123.com ON 2018/11/25.
  */
 public class JoinThread1 extends Thread {
     public static volatile int n = 0;

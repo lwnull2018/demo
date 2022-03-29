@@ -26,7 +26,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by lwnull2018@gmail.com ON 2020/10/20.
+ * Created by abc@123.com ON 2020/10/20.
  */
 public class MyBot extends TelegramLongPollingBot {
 

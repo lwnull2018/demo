@@ -8,11 +8,12 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @Description 请描述类的业务用途
  * @ClassName User
- * @Author lwnull2018@gmail.com
+ * @Author abc@123.com
  * @Date 2021/9/5 9:07 PM
  * @Version 1.0
  **/
@@ -108,4 +109,5 @@ public class User implements UserDetails {
     public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
+
 }

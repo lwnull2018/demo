@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 /**
- * Created by lwnull2018@gmail.com ON 2020/10/20.
+ * Created by abc@123.com ON 2020/10/20.
  */
 @Component
 public class InitializingService implements InitializingBean {
