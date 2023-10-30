@@ -1,6 +1,7 @@
 package com.jack.chen.telegram.bot.service;
 
 import com.jack.chen.telegram.bot.MyBot;
+import com.jack.chen.telegram.bot.SendMsgBot;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -39,7 +40,8 @@ public class InitializingService implements InitializingBean {
         try {
 
             // 注册我们的机器人
-            botsApi.registerBot(new MyBot(username, token, customerActiveService));
+//            botsApi.registerBot(new MyBot(username, token, customerActiveService));
+            botsApi.registerBot(new SendMsgBot(username, token, customerActiveService));
 
         } catch (TelegramApiException e) {
             e.printStackTrace();

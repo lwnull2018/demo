@@ -97,7 +97,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
     /**
      * 两个时间相减得到的差，相差几天几小时几分几秒
      *
-     * @param small 小的时间
+     * @param diffSeconds 小的时间
      * @return 返回对应的时间差
      */
     public static String DifferTimeStr(long diffSeconds) {
