@@ -20,6 +20,7 @@
     <modules>
 <!--             <module>base-projcet</module>-->
         <module>RocketMQDelayMsg</module>
+        <module>juc</module>
     </modules>
 
     <properties>
