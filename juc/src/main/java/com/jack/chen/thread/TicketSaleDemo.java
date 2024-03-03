@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 class Ticket {
 
     int number = 50;
-    ReentrantLock reentrantLock = new ReentrantLock(true);//默认为false，非公平锁。公平也只是相对公平，不是绝对公平。
+    ReentrantLock reentrantLock = new ReentrantLock();//默认为false，非公平锁。公平也只是相对公平，不是绝对公平。
 
     void sale() {
         reentrantLock.lock();
