@@ -1,5 +1,5 @@
 # 1. 项目说明
-这是一个Springboot整合mybatis的环境，搭建了基础框架，方便快速进行一些验证性的试验操作
+这是一个Springboot整合mybatis的环境，搭建了基础框架，能跑得通，方便快速进行一些验证性的试验操作
 
 # 2. 组件版本
  | 组件                | 版本     |
@@ -23,7 +23,7 @@ create table dept(
 1. hello接口，说明web项目有正常启动运行
 ![hello_1.png](images/hello_1.png)
 
-2. add接口，用于先数据库中插入数据
+2. add接口，用向先数据库中插入数据
 ![add_2.pgn](images/add_2.png)
 
 3. selectAll接口，Mapper接口通过@Select注解的方式返回所有数据
