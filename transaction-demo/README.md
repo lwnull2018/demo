@@ -64,4 +64,4 @@ A方法没有标注事务，跟A方法同一个类里有个B方法，B方法有�
 
 [@Transactional 注解及面试题]
 
-[@Transactional 注解及面试题]: https://www.notion.so/Spring-Transactional-cea56683dc5147b298d2aef9324a476b?pvs=4
+[@Transactional 注解及面试题]: https://silken-minnow-d69.notion.site/Spring-Transactional-cea56683dc5147b298d2aef9324a476b?pvs=4
