@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jack.chen.transactiondemo.mapper.DeptMapper">
+    <resultMap id="BaseResultMap" type="com.jack.chen.transactiondemo.entity.Dept">
+        <id column="deptno" jdbcType="VARCHAR" property="deptno"/>
+        <id column="dname" jdbcType="VARCHAR" property="dname"/>
+        <result column="loc" jdbcType="VARCHAR" property="loc"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        deptno, dname, loc
+    </sql>
+
+</mapper>
