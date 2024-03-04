@@ -33,6 +33,19 @@ User(id=3, name=Tom, age=28, email=test3@baomidou.com)
 User(id=4, name=Sandy, age=21, email=test4@baomidou.com)
 User(id=5, name=Billie, age=24, email=test5@baomidou.com)
 
+# 3. 小结
+通过以上几个简单的步骤，我们就实现了 User 表的 CRUD 功能，甚至连 XML 文件都不用编写！
+
+从以上步骤中，我们可以看到集成MyBatis-Plus非常的简单，只需要引入 starter 工程，并配置 mapper 扫描路径即可。
+
+>注意
+> 
+>引入 MyBatis-Plus 之后请不要再次引入 MyBatis 以及 mybatis-spring-boot-starter和MyBatis-Spring，以避免因版本差异导致的问题。
+
+#
+
+[Mybatis-Plus官网]
+
 ```mysql
 DROP TABLE IF EXISTS `user`;
 
@@ -54,3 +67,5 @@ INSERT INTO `user` (id, name, age, email) VALUES
 (5, 'Billie', 24, 'test5@baomidou.com');
 
 ```
+
+[Mybatis-Plus官网]: https://baomidou.com/pages/bab2db/#release

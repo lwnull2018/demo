@@ -23,4 +23,43 @@ class SpringbootMybatisPlusApplicationTests {
 		userList.forEach(System.out::println);
 	}
 
+	@Test
+	public void testInsert() {
+		System.out.println(("----- insert method test ------"));
+
+		User user = new User();
+		user.setId(6L);
+		user.setName("Jack");
+		user.setEmail("test6@test.com");
+		user.setAge(25);
+
+		int r = userMapper.insert(user);
+		Assert.isTrue(1 == r, "");
+		System.out.println(r);
+	}
+
+	@Test
+	public void testUpdate() {
+		System.out.println(("----- update method test ------"));
+
+		User user = new User();
+		user.setId(6L);
+		user.setName("Jack-chen");
+		user.setEmail("test7@test.com");
+		user.setAge(24);
+
+		int r = userMapper.updateById(user);
+		Assert.isTrue(1 == r, "");
+		System.out.println(r);
+	}
+
+	@Test
+	public void testDelete() {
+		System.out.println(("----- delete method test ------"));
+
+		int r = userMapper.deleteById(6);
+		Assert.isTrue(1 == r, "");
+		System.out.println(r);
+	}
+
 }
