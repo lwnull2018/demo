@@ -1,12 +1,12 @@
 # 1. 项目说明
 该项目是SpringBoot整合Mybatis-plus示例
 
-|组件| 版本    |
-|:---|:------|
-|JDK | 17    |
-|springboot   | 3.0.3 |
-|mybatis-spring-boot-starter| 3.0.3 |
- |mybatis-plus-boot-starter| 3.5.5 |
+| 组件                         | 版本    |
+|:---------------------------|:------|
+| JDK                        | 17    |
+| springboot                 | 3.2.3 |
+| mysql-connector-j          | 8.3.0 |
+ | mybatis-plus-boot3-starter | 3.5.5 |
 
 # 2. 测试
 ```java
