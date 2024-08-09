@@ -1,4 +1,4 @@
-package com.lwnull.base.io.nio.zerocopy;
+package com.lwnull.nio.zerocopy;
 
 import java.io.FileInputStream;
 import java.io.IOException;

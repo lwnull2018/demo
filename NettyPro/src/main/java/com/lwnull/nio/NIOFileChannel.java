@@ -1,6 +1,5 @@
-package com.lwnull.base.io.nio;
+package com.lwnull.nio;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;

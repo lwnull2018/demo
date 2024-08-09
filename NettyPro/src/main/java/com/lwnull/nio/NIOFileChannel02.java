@@ -1,4 +1,4 @@
-package com.lwnull.base.io.nio;
+package com.lwnull.nio;
 
 import java.io.File;
 import java.io.FileInputStream;
