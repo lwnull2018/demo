@@ -23,16 +23,16 @@ public class TestServer {
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new TestServerInitializer());
 
-            ChannelFuture channelFuture = serverBootstrap.bind(new InetSocketAddress(6666)).sync();
+            ChannelFuture channelFuture = serverBootstrap.bind(new InetSocketAddress(10000)).sync();
 
             //给 cf 注册监听事件，监听关心的事件
             channelFuture.addListener(new ChannelFutureListener() {
                 @Override
                 public void operationComplete(ChannelFuture channelFuture) throws Exception {
                     if (channelFuture.isSuccess()) {
-                        System.out.println("监听端口 6666 成功");
+                        System.out.println("监听端口 10000 成功");
                     } else {
-                        System.out.println("监听端口 6666 失败");
+                        System.out.println("监听端口 10000 失败");
                     }
                 }
             });
